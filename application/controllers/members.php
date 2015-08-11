@@ -206,7 +206,8 @@ class Members extends CI_Controller
     public function is_logged() 
     {
         $is_logged = $this->session->userdata('is_logged');
-        if (!isset($is_logged) || $is_logged != TRUE) {            
+        if (!isset($is_logged) || $is_logged != TRUE) {  
+            redirect(base_url().'index.php/login/logout');
             die();
         }
     }
