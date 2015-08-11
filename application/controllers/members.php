@@ -206,8 +206,7 @@ class Members extends CI_Controller
     public function is_logged() 
     {
         $is_logged = $this->session->userdata('is_logged');
-        if (!isset($is_logged) || $is_logged != TRUE) {
-            echo 'registred area! <a href="login">Login</a>' ;
+        if (!isset($is_logged) || $is_logged != TRUE) {            
             die();
         }
     }
